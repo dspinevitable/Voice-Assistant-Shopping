@@ -1,0 +1,258 @@
+.container {
+  max-width: 1000px;
+  margin: 0 auto;
+  background: white;
+  border-radius: 20px;
+  box-shadow: 0 20px 40px rgba(0,0,0,0.1);
+  overflow: hidden;
+  min-height: 100vh;
+}
+
+.header {
+  background: linear-gradient(135deg, #4facfe 0%, #00f2fe 100%);
+  color: white;
+  padding: 30px;
+  text-align: center;
+}
+
+.header h1 {
+  font-size: 2.5rem;
+  margin-bottom: 10px;
+}
+
+.header p {
+  opacity: 0.9;
+  font-size: 1.1rem;
+}
+
+.main-content {
+  padding: 30px;
+}
+
+.command-section {
+  background: #f8f9fa;
+  border-radius: 15px;
+  padding: 25px;
+  margin-bottom: 20px;
+}
+
+.input-group {
+  display: flex;
+  gap: 10px;
+  margin-bottom: 15px;
+}
+
+.command-input {
+  flex: 1;
+  padding: 15px 20px;
+  border: 2px solid #e9ecef;
+  border-radius: 50px;
+  font-size: 1.1rem;
+  outline: none;
+  transition: border-color 0.3s ease;
+}
+
+.command-input:focus {
+  border-color: #4facfe;
+}
+
+.send-button {
+  background: #4facfe;
+  color: white;
+  border: none;
+  width: 60px;
+  border-radius: 50px;
+  font-size: 1.2rem;
+  cursor: pointer;
+  transition: background 0.3s ease;
+}
+
+.send-button:hover:not(:disabled) {
+  background: #3a9df5;
+}
+
+.send-button:disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
+}
+
+.quick-commands {
+  display: flex;
+  gap: 10px;
+  flex-wrap: wrap;
+}
+
+.quick-commands button {
+  background: #e9ecef;
+  border: none;
+  padding: 8px 16px;
+  border-radius: 20px;
+  cursor: pointer;
+  font-size: 0.9rem;
+  transition: background 0.3s ease;
+}
+
+.quick-commands button:hover {
+  background: #dee2e6;
+}
+
+.feedback {
+  background: #e3f2fd;
+  border: 1px solid #bbdefb;
+  border-radius: 10px;
+  padding: 15px;
+  margin: 20px 0;
+  text-align: center;
+  font-size: 1.1rem;
+  color: #1565c0;
+}
+
+.content-grid {
+  display: grid;
+  grid-template-columns: 2fr 1fr;
+  gap: 30px;
+}
+
+@media (max-width: 768px) {
+  .content-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+.list-section, .suggestions-section {
+  background: #f8f9fa;
+  border-radius: 15px;
+  padding: 25px;
+}
+
+.section-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 20px;
+}
+
+.section-header h2, .section-header h3 {
+  color: #333;
+  margin: 0;
+}
+
+.clear-button {
+  background: #ff6b6b;
+  color: white;
+  border: none;
+  padding: 8px 16px;
+  border-radius: 8px;
+  cursor: pointer;
+  font-size: 0.9rem;
+  transition: background 0.3s ease;
+}
+
+.clear-button:hover {
+  background: #ee5a24;
+}
+
+.empty-list, .empty-suggestions {
+  text-align: center;
+  padding: 40px 20px;
+  color: #666;
+}
+
+.items-container {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.list-item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 15px;
+  background: white;
+  border-radius: 10px;
+  border-left: 4px solid #4facfe;
+}
+
+.item-name {
+  font-size: 1.1rem;
+  color: #333;
+  font-weight: 500;
+}
+
+.quantity {
+  background: #4facfe;
+  color: white;
+  border-radius: 12px;
+  padding: 2px 8px;
+  font-size: 0.8rem;
+  margin-left: 8px;
+}
+
+.item-category {
+  background: #e9ecef;
+  color: #666;
+  padding: 4px 12px;
+  border-radius: 15px;
+  font-size: 0.8rem;
+  text-transform: capitalize;
+}
+
+.suggestions-list {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.suggestion-item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 12px;
+  background: white;
+  border-radius: 10px;
+  cursor: pointer;
+  border-left: 4px solid #ffd93d;
+  transition: all 0.3s ease;
+}
+
+.suggestion-item:hover {
+  transform: translateX(5px);
+  background: #fff9e6;
+}
+
+.suggestion-info {
+  display: flex;
+  flex-direction: column;
+}
+
+.suggestion-name {
+  font-weight: 600;
+  color: #333;
+  text-transform: capitalize;
+}
+
+.suggestion-reason {
+  font-size: 0.8rem;
+  color: #666;
+  margin-top: 2px;
+}
+
+.add-suggestion-btn {
+  background: #ffd93d;
+  color: #333;
+  border: none;
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  cursor: pointer;
+  font-size: 1.2rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: background 0.3s ease;
+}
+
+.add-suggestion-btn:hover {
+  background: #ffcd00;
+}

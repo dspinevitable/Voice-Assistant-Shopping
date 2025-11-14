@@ -1,0 +1,175 @@
+.voice-command {
+  text-align: center;
+  margin-bottom: 30px;
+}
+
+.recording-section {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 40px;
+  flex-wrap: wrap;
+  margin-bottom: 20px;
+}
+
+.voice-button {
+  background: linear-gradient(135deg, #ff6b6b 0%, #ee5a24 100%);
+  color: white;
+  border: none;
+  padding: 20px 40px;
+  border-radius: 50px;
+  font-size: 1.2rem;
+  font-weight: bold;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  box-shadow: 0 10px 25px rgba(255, 107, 107, 0.3);
+  min-width: 250px;
+}
+
+.voice-button:hover:not(:disabled) {
+  transform: translateY(-2px);
+  box-shadow: 0 15px 35px rgba(255, 107, 107, 0.4);
+}
+
+.voice-button.recording {
+  background: linear-gradient(135deg, #ff9ff3 0%, #f368e0 100%);
+  animation: pulse 1.5s infinite;
+}
+
+.voice-button:disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
+  transform: none;
+}
+
+@keyframes pulse {
+  0% { transform: scale(1); }
+  50% { transform: scale(1.05); }
+  100% { transform: scale(1); }
+}
+
+.recording-instructions {
+  text-align: left;
+  max-width: 300px;
+  background: #f8f9fa;
+  padding: 20px;
+  border-radius: 15px;
+  border-left: 4px solid #4facfe;
+}
+
+.recording-instructions p {
+  font-weight: 600;
+  margin-bottom: 10px;
+  color: #333;
+}
+
+.recording-instructions ul {
+  list-style: none;
+  padding: 0;
+}
+
+.recording-instructions li {
+  padding: 8px 0;
+  color: #666;
+  border-left: 3px solid #4facfe;
+  padding-left: 12px;
+  margin: 5px 0;
+  font-size: 0.9rem;
+}
+
+.transcript {
+  background: #e3f2fd;
+  border: 1px solid #bbdefb;
+  border-radius: 10px;
+  padding: 15px;
+  margin: 15px 0;
+  font-size: 1.1rem;
+  color: #1565c0;
+  animation: fadeIn 0.3s ease;
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(-10px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+.spinner {
+  border: 3px solid #f3f3f3;
+  border-top: 3px solid #4facfe;
+  border-radius: 50%;
+  width: 30px;
+  height: 30px;
+  animation: spin 1s linear infinite;
+  margin: 0 auto 10px;
+}
+
+@keyframes spin {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+}
+
+.loading {
+  text-align: center;
+  color: #4facfe;
+  font-size: 1.1rem;
+  margin: 20px 0;
+}
+
+.feedback {
+  background: #e3f2fd;
+  border: 1px solid #bbdefb;
+  border-radius: 10px;
+  padding: 15px;
+  margin: 20px 0;
+  text-align: center;
+  font-size: 1.1rem;
+  color: #1565c0;
+  position: relative;
+}
+
+.feedback.error {
+  background: #ffebee;
+  border: 1px solid #ffcdd2;
+  color: #c62828;
+}
+
+.close-feedback {
+  background: none;
+  border: none;
+  font-size: 1.5rem;
+  cursor: pointer;
+  margin-left: 10px;
+  color: inherit;
+  position: absolute;
+  right: 15px;
+  top: 50%;
+  transform: translateY(-50%);
+}
+
+/* Browser compatibility warning */
+.browser-warning {
+  background: #fff3cd;
+  border: 1px solid #ffeaa7;
+  border-radius: 10px;
+  padding: 15px;
+  margin: 15px 0;
+  color: #856404;
+  font-size: 0.9rem;
+}
+
+@media (max-width: 768px) {
+  .recording-section {
+    flex-direction: column;
+    gap: 20px;
+  }
+  
+  .voice-button {
+    min-width: 200px;
+    padding: 15px 30px;
+    font-size: 1.1rem;
+  }
+  
+  .recording-instructions {
+    max-width: 100%;
+  }
+}
