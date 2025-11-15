@@ -35,9 +35,4 @@ A modern, voice-enabled shopping list manager with AI-powered smart suggestions 
 - Node.js 16+ 
 - npm or yarn
 
-### Installation
 
-1. **Clone the repository**
-   ```bash
-   git clone https://github.com/JakkuMadhu/shopping-assistant.git
-   cd shopping-assistant
